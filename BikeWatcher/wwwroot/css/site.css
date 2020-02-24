@@ -104,3 +104,17 @@ img
 {
     height: 100%;
 }
+
+.indexApiTable
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.indexApiparagraph
+{
+    display: flex;
+    width: 10%;
+    text-align: center;
+}

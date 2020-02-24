@@ -12,7 +12,7 @@ namespace BikeWatcher.Models
         public string number { get; set; }
         [JsonPropertyName("pole")]
         public string pole { get; set; }
-        [JsonPropertyName("available_bike")]
+        [JsonPropertyName("available_bikes")]
         public string available_bikes { get; set; }
         [JsonPropertyName("code_insee")]
         public string code_insee { get; set; }
@@ -28,7 +28,7 @@ namespace BikeWatcher.Models
         public string startdate { get; set; }
         [JsonPropertyName("langue")]
         public string langue { get; set; }
-        [JsonPropertyName("bike_stand")]
+        [JsonPropertyName("bike_stands")]
         public string bike_stands { get; set; }
         [JsonPropertyName("last_update")]
         public string last_update { get; set; }
@@ -40,7 +40,7 @@ namespace BikeWatcher.Models
         public string titre { get; set; }
         [JsonPropertyName("status")]
         public string status { get; set; }
-        [JsonPropertyName("comune")]
+        [JsonPropertyName("commune")]  
         public string commune { get; set; }
         [JsonPropertyName("description")]
         public string description { get; set; }

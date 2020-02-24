@@ -3,5 +3,9 @@
 
 @foreach (var item in Model)
 {
-<p>@item.name</p>
+<div class="indexApiTable">
+    <p class="indexApiparagraph">@item.name</p>
+    <p class="indexApiparagraph">@item.available_bikes / @item.bike_stands</p>
+    <p class="indexApiparagraph">@item.commune</p>
+</div>
 }

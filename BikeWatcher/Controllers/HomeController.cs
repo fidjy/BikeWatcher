@@ -23,10 +23,7 @@ namespace BikeWatcher.Controllers
             return View();
         }
 
-        public IActionResult Station()
-        {
-            return View();
-        }
+       
 
         public IActionResult Map()
         {

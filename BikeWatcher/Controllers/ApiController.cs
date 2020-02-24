@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Diagnostics;
+using BikeWatcher.Models;
 
 namespace BikeWatcher.Controllers
 {
@@ -17,14 +18,14 @@ namespace BikeWatcher.Controllers
         public async Task<IActionResult> Index()
         {
             var stations = await ProcessRepositories();
-            ViewBag.allStations = stations.OrderBy(s => s.name);
-            return View();
+            stations = stations.OrderBy(s => s.name).ToList();
+            return View(stations);
         }
 
-        private static async Task<List<Repository>> ProcessRepositories()
+        private static async Task<List<BikeStation>> ProcessRepositories()
         {
             client.DefaultRequestHeaders.Accept.Clear();
-            var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+            var streamTask = client.GetStreamAsync("https://download.data.grandlyon.com/ws/rdata/jcd_jcdecaux.jcdvelov/all.json");
             var repositories = await JsonSerializer.DeserializeAsync<RootObject>(await streamTask);
             return repositories.values;
         }

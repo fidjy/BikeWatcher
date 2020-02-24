@@ -23,7 +23,17 @@ namespace BikeWatcher.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Station()
+        {
+            return View();
+        }
+
+        public IActionResult Map()
+        {
+            return View();
+        }
+
+        public IActionResult Favory()
         {
             return View();
         }

@@ -1,11 +1,19 @@
 ﻿@model List<BikeStation>
-<p>index test</p>
+    <div id="indexPresentation">
+        <h1>Station</h1>
+        <h2>Vous trouverez ici l'ensemble des station de notre réseau.</h2>
+    </div>
 
+<div class="indexApiTitreTable">
+    <h3>Nom de la station</h3>
+    <h3>Velov Disponible</h3>
+    <h3>Localisation</h3>
+</div>
 @foreach (var item in Model)
 {
-<div class="indexApiTable">
-    <p class="indexApiparagraph">@item.name</p>
-    <p class="indexApiparagraph">@item.available_bikes / @item.bike_stands</p>
-    <p class="indexApiparagraph">@item.commune</p>
-</div>
+    <div class="indexApiTable">
+        <p class="indexApiparagraph">@item.name</p>
+        <p class="indexApiparagraph">@item.available_bikes / @item.bike_stands</p>
+        <p class="indexApiparagraph">@item.commune</p>
+    </div>
 }
